@@ -2,7 +2,8 @@
 Le but de ce test est de tester la compétence du candidat en developpement fullstack javascript.
 
 ## Sujet
-Creer une applicatio CRUD produit mobile et web avec un API Graphql Nodejs, ReactJS, et ReactNative.
+Creer une application CRUD employé mobile et web avec un API Graphql Nodejs, ReactJS, et ReactNative. 
+Employé: nom, prenom, age, poste
 
 ## Spec technique
 
