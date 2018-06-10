@@ -1,0 +1,38 @@
+type Query {
+  hello(name: String): String!
+
+  findEmployes(skip: Int, limit: Int): [Employe]
+  findEmployeById(id: ID!): Employe
+  findExperiences(skip: Int, limit: Int): [Experience]
+  findExperienceById(id: ID!): Experience
+}
+
+type Mutation {
+  createEmploye(nom: String, prenom: String, age: Int, poste: String, experience: String): Employe
+  updateEmploye(id: ID!, nom: String, prenom: String, age: Int, poste: String, experience: String): Employe
+  deleteEmploye(id: ID!): ID!
+  createExperience(titre: String!, description: String): Experience
+  updateExperience(id: ID!, titre: String, description: String): Experience
+  deleteExperience(id: ID!): ID!
+}
+
+type Employe {
+  id: ID
+  nom: String
+  prenom: String
+  age: Int
+  poste: String
+  experience: Experience
+}
+
+type Experience {
+  id: ID
+  titre: String
+  description: String
+}
+
+input ExperienceInput {
+  id: ID
+  titre: String
+  description: String
+}
