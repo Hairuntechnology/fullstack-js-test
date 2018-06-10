@@ -56,6 +56,27 @@ class App extends Component {
   }
 }
 
+const GET_FORMTION = gql`
+  query {
+    accounts {
+      id,
+      sin,
+      uuid,
+      createdAt,
+      username,
+      publicKey,
+      coinbase,
+      firstName,
+      lastName,
+    }
+  }
+`
+
+const withGetFormtionQuery = graphql(GET_FORMTION, { name: 'getFormation'})
+const withData = compose(
+  withGetFormtionQuery, 
+)
 
 
-export default App;
+
+export default {App,withData}
