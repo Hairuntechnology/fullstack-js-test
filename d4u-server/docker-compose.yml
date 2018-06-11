@@ -1,0 +1,21 @@
+version: '2.1'
+
+services:
+  mongo:
+    image: mongo:latest
+    volumes:
+      - d4u-data:/data
+
+  d4u-server:
+    image: d4u-server
+    build: .
+    depends_on:
+     - mongo
+    environment:
+      NODE_ENV: production
+      MONGO_URL: mongodb://mongo:27017
+    ports:
+      - 4001:4001
+
+volumes:
+  d4u-data:
