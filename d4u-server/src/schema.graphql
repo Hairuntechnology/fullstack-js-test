@@ -4,7 +4,7 @@ type Query {
   findEmployes(skip: Int, limit: Int): [Employe]
   findEmployeById(id: ID!): Employe
   findExperiences(skip: Int, limit: Int): [Experience]
-  findExperienceById(id: ID!): Experience
+  findExperienceById(id: ID): Experience
 }
 
 type Mutation {
