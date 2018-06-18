@@ -15,8 +15,9 @@ const server = new GraphQLServer({
     })
 })
 
-server.express.use(cors())
+
 server.express.use(morgan('dev'))
+server.express.use(cors())
 
 const options = {
     port: process.env.NODE_PORT || 4001
